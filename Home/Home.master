@@ -1,0 +1,206 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home_Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <link rel="stylesheet" type="text/css" />
+</head>
+<body bgcolor="#663333">
+    <form id="form1" runat="server">
+        <table style="width: 100%; position: static">
+            <tr>
+                <td colspan="8" style="background-image: url(Profile/images/img05.png); vertical-align: middle;
+                    width: 100%; text-align: center; height: 21px;">
+                    <strong><span style="color: #ffffff">WelCome:</span></strong><asp:Label ID="lbluser" runat="server" Font-Bold="True" Style="position: static" ForeColor="LimeGreen"></asp:Label></td>
+            </tr>
+            <tr>
+                <td colspan="8" style="background-image: url(Profile/images/img05.png); vertical-align: top;
+                    width: 100%; height: 21px; text-align: right">
+                    <asp:Button ID="Button4" runat="server" BackColor="Gray" Font-Bold="True" ForeColor="#000040"
+                        Height="32px" Style="position: static" Text="Logout" OnClick="Button4_Click" ValidationGroup="1" Width="89px" /></td>
+            </tr>
+            <tr>
+                <td colspan="8" style="background-image: url(Profile/images/img05.png); width: 100%">
+                    <asp:Image ID="Image1" runat="server" Height="208px" ImageUrl="~/images/main Banner.jpg"
+                        Width="100%" BorderColor="Gray" BorderStyle="Groove" BorderWidth="4px" /></td>
+            </tr>
+            <tr>
+                <td style="width: 20%; height: 35px;">
+                    </td>
+                <td style="width: 6%; height: 35px;">
+                    <asp:Button ID="btnhome" runat="server" BackColor="Gray" Font-Bold="True" ForeColor="#000040"
+                        Style="position: static" Text="Home" Width="89px" Height="32px" PostBackUrl="~/Home/Home.aspx" ValidationGroup="1" />&nbsp;</td>
+                <td style="width: 6%; height: 35px;">
+                    &nbsp;<asp:Button ID="Button1" runat="server" BackColor="Gray" Font-Bold="True" ForeColor="#000040"
+                        Style="position: static" Text="Profile" Height="32px" Width="89px" PostBackUrl="~/Home/checkprofile.aspx" ValidationGroup="1" /></td>
+                <td style="width: 6%; height: 35px;">
+                    &nbsp;<asp:Button ID="Button2" runat="server" BackColor="Gray" Font-Bold="True" ForeColor="#000040"
+                        Style="position: static" Text="Scrap" Height="32px" PostBackUrl="~/Home/scrap.aspx" ValidationGroup="1" Width="89px" />&nbsp;</td>
+                <td style="width: 6%; height: 35px; vertical-align: middle; text-align: center;">
+                    &nbsp;<asp:Button ID="Button3" runat="server" BackColor="Gray" Font-Bold="True" ForeColor="#000040"
+                        Style="position: static" Text="Feedback" Height="32px" PostBackUrl="~/Home/Feedback.aspx" ValidationGroup="1" Width="89px" />&nbsp;</td>
+                <td style="width: 35%; height: 35px; vertical-align: middle; text-align: center;">
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+                    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                    &nbsp;&nbsp;
+                </td>
+                <td colspan="2" style="height: 35px">
+                    <span style="width: 35%; color: #000066; vertical-align: top; text-align: left;"> <strong>
+                        Search</strong>:
+                        <asp:TextBox
+                        ID="TextBox1" runat="server" Style="position: static" Width="89px"></asp:TextBox>
+                        <asp:Button ID="Button5" runat="server" BackColor="Gray" Font-Bold="True" ForeColor="#000040"
+                            Height="27px" Style="position: static" Text="Go" Width="50px" OnClick="Button5_Click" ValidationGroup="1" /></span></td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top; width: 20%; text-align: left; height: 1195px;">
+                    <table style="width: 100%; position: static">
+                        <tr>
+                            <td style="width: 100px">
+                                <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Style="position: static" Width="160px">
+                                    <ItemTemplate>
+                                        <asp:Image ID="Image2" runat="server" Height="150px" ImageUrl='<%# Eval("Photos", "{0}") %>'
+                                            Style="position: static" Width="150px" /><br />
+                                        <br />
+                                    </ItemTemplate>
+                                </asp:DataList><asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                                    SelectCommand="SELECT [Photos] FROM [profile1] WHERE ([email] = @email)">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="email" SessionField="uname" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px">
+                                <asp:LinkButton ID="LinkButton1" runat="server" BackColor="#C0C0FF" Font-Bold="True"
+                                    ForeColor="#000040" Height="22px" Style="position: static" Width="63px" PostBackUrl="~/Home/checkprofile.aspx">Profile</asp:LinkButton></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px">
+                                <asp:LinkButton ID="LinkButton2" runat="server" BackColor="#C0C0FF" Font-Bold="True"
+                                    ForeColor="#000040" Height="22px" Style="position: static" Width="63px" PostBackUrl="~/Home/scrap.aspx">Scrap</asp:LinkButton></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px">
+                                <asp:LinkButton ID="LinkButton3" runat="server" BackColor="#C0C0FF" Font-Bold="True"
+                                    ForeColor="#000040" Height="22px" Style="position: static" Width="63px" PostBackUrl="~/Home/photogallary.aspx">Photos</asp:LinkButton></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px">
+                                <asp:LinkButton ID="LinkButton4" runat="server" BackColor="#C0C0FF" Font-Bold="True"
+                                    ForeColor="#000040" Height="22px" Style="position: static" PostBackUrl="~/Home/Deletefriends.aspx">Delete friends</asp:LinkButton></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px; height: 19px;">
+                                <asp:LinkButton ID="LinkButton6" runat="server" BackColor="#C0C0FF" Font-Bold="True"
+                                    ForeColor="#000040" Height="22px" Style="position: static" Width="50px" PostBackUrl="~/Home/Default.aspx">Chat</asp:LinkButton></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px; height: 23px;">
+                                <asp:LinkButton ID="LinkButton7" runat="server" BackColor="#C0C0FF" Font-Bold="True"
+                                    ForeColor="Navy" PostBackUrl="~/Home/changepass.aspx" Width="120px">Change Password</asp:LinkButton></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px">
+                                <asp:LinkButton ID="LinkButton8" runat="server" BackColor="#C0C0FF" Font-Bold="True"
+                                    ForeColor="#000040" Height="22px" PostBackUrl="~/Home/RequestFrnds.aspx" Style="position: static"
+                                    Width="161px">Check New Request</asp:LinkButton></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="5" style="vertical-align: top; text-align: left; height: 1195px; width: 50%;">
+                    <br />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    &nbsp;<br />
+                    <br />
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </td>
+                <td colspan="2" style="vertical-align: top; width: 30%; height: 1195px; text-align: left">
+                    <table style="width: 100%">
+                        <tr>
+                            <td style="width: 100%">
+                                <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2" Width="100%">
+                                    <ItemTemplate>
+                                        <asp:Image ID="Image4" runat="server" BorderColor="Maroon" BorderStyle="Groove" BorderWidth="3px"
+                                            Height="150px" ImageUrl='<%# Eval("photo", "{0}") %>' Width="150px" />&nbsp;<br />
+                                        &nbsp;<asp:Label ID="aadvLabel" runat="server" Font-Bold="True" ForeColor="#404040"
+                                            Text='<%# Eval("aadv") %>'></asp:Label><br />
+                                        <br />
+                                    </ItemTemplate>
+                                </asp:DataList><asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                                    SelectCommand="SELECT [photo], [aadv] FROM [tbladd]"></asp:SqlDataSource>
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" BackColor="LightGoldenrodYellow"
+                        BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataSourceID="SqlDataSource4"
+                        ForeColor="Black">
+                        <FooterStyle BackColor="Tan" />
+                        <EditRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                        <EditItemTemplate>
+                            andetail:
+                            <asp:TextBox ID="andetailTextBox" runat="server" Text='<%# Bind("andetail") %>'>
+                            </asp:TextBox><br />
+                            andate:
+                            <asp:TextBox ID="andateTextBox" runat="server" Text='<%# Bind("andate") %>'>
+                            </asp:TextBox><br />
+                            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update"
+                                Text="Update">
+                            </asp:LinkButton>
+                            <asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel"
+                                Text="Cancel">
+                            </asp:LinkButton>
+                        </EditItemTemplate>
+                        <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                        <InsertItemTemplate>
+                            andetail:
+                            <asp:TextBox ID="andetailTextBox" runat="server" Text='<%# Bind("andetail") %>'>
+                            </asp:TextBox><br />
+                            andate:
+                            <asp:TextBox ID="andateTextBox" runat="server" Text='<%# Bind("andate") %>'>
+                            </asp:TextBox><br />
+                            <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert"
+                                Text="Insert">
+                            </asp:LinkButton>
+                            <asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel"
+                                Text="Cancel">
+                            </asp:LinkButton>
+                        </InsertItemTemplate>
+                        <ItemTemplate>
+                            &nbsp;<asp:Label ID="andetailLabel" runat="server" Text='<%# Bind("andetail") %>'></asp:Label><br />
+                            &nbsp;<asp:Label ID="andateLabel" runat="server" Text='<%# Bind("andate") %>'></asp:Label><br />
+                        </ItemTemplate>
+                        <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                    </asp:FormView>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="SELECT [anew], [andate], [andetail] FROM [tblanews]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                        SelectCommand="SELECT [andetail], [andate] FROM [tblanews]"></asp:SqlDataSource>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

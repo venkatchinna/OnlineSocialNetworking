@@ -1,0 +1,288 @@
+/*
+Design by Metamorphosis Design
+http://www.metamorphozis.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+*
+{
+margin: 0px;
+padding: 0px;
+}
+
+a{
+	color: #b22d00;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+body{
+	background: url(images/bg_all.jpg);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #464646;
+	margin-top: 25px;
+}
+
+#content{
+	margin: 0 auto;
+	width: 817px;
+	text-align: left;
+	background-color: #ffffff;
+}
+
+#main{
+	width: 817px;
+	margin: 0 auto;
+	clear:both;
+	background: url(images/bg_main.jpg);
+	background-repeat:repeat-y;
+	background-position:left;
+	margin-top: 19px;
+}
+
+#header {
+	height: 415px;
+	width: 817px;
+	background: url(images/header.jpg);
+	background-repeat:no-repeat;
+	background-position:top;
+}
+
+#logo {
+	height: 15px;
+	text-align: left;
+	width: 770px;
+	padding-left: 50px;
+	padding-top: 300px;
+}
+
+
+#logo a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: 18px;
+	color: #ffffff;
+}
+#logo H2 a{
+	font-size: 12px;
+}
+
+#menu{
+	width: 780px;
+	height: 84px;
+	background: url(images/bg_menu.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+	margin-left: 19px;
+	margin-right: 19px;
+}
+
+#menu ul {
+	list-style: none;
+	padding-left: 13px;
+}
+
+#menu li {
+	
+	display: inline; 
+	
+}
+
+#menu a {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	float: left;
+	width: 150px;
+	height: 49px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 35px;
+	font-size: 16px;
+}
+
+#menu a:hover{
+	width: 150px;
+	height: 49px;
+	background-color: #4e3e27;
+	text-decoration: none;
+}
+
+#left{
+	width: 269px;
+	padding-left: 19px;
+	padding-right: 5px;
+}
+
+#left_top{
+	background: url(images/bg_left_top.jpg);
+	height: 3px;
+}
+
+#left H3{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 23px;
+	height: 37px;	
+	font-weight: normal;
+	padding-left: 25px;
+	padding-top: 8px;
+	color: #ffffff;
+	background: url(images/title_left.jpg);
+	background-repeat:no-repeat;
+	background-position:top;
+	margin-top: 3px;
+}
+
+#left a {
+	color: #4e3e27;
+	text-decoration:none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+}
+
+#left ul {
+	list-style: none;
+	padding-left: 25px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+#left li {
+	padding-left: 15px;
+	padding-bottom: 3px;
+	border-bottom: 1px dotted #4e3e27;
+	margin-bottom: 5px;
+	width: 175px;
+}
+
+#left #categories ul li{
+	background: url(images/ls1.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;
+}
+
+#left #categories ul li a{
+	color: #4e3e27;
+	text-decoration:none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+}
+
+#left #partners ul li{
+	background: url(images/ls2.jpg);
+	background-repeat:no-repeat;
+	background-position:left top;	
+}
+
+#left #partners ul li a{
+	color: #464646;
+	text-decoration:none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:normal;
+}
+
+#right{
+	float: right;
+	width: 490px;
+	padding-top: 10px;
+	margin-right: 19px;
+}
+
+#right H4{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 28px;
+	font-weight: normal;
+	color: #9f0000;
+}
+
+#right p {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+#right h2 {
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	color: #196050;
+}
+
+.date {
+	margin-left: 11px;
+	padding-bottom: 15px;
+	height: 20px;
+}
+
+.dateleft{
+	background:url(images/date_02.jpg) no-repeat;
+	padding-left: 20px;
+	height: 16px;
+	margin-top: 4px;
+	width:200px;
+	margin-left: 135px;
+	width: 130px;
+	float:right;
+}
+
+.dateright{
+	margin-top: 2px;
+	margin-left: 15px;
+	background:url(images/date_01.jpg) no-repeat left;
+	padding-left: 25px;
+	height: 16px;
+	float: left;
+}
+
+.dateleft a,.dateright a{
+	color: #ff4200;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+}
+
+#gal{
+	height: 110px;
+}
+
+#footer {
+	height: 110px;
+	clear: both;
+	background: url(images/footer.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	padding-top: 80px;
+	padding-left: 200px;
+}
+
+#footer p {
+	margin: 0;
+	font-size: 10px;
+	text-align: center;
+	color: #464646;
+}
+
+#footer a {
+	color: #464646;
+	font-weight: normal;
+}
+
+#bot{
+	background: url(images/bot.png);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+}

@@ -1,0 +1,32 @@
+﻿This report shows the steps taken to convert your Web application from ASP.NET 1.1 to ASP.NET 2.0. 
+There may be some unresolved conversion issues you will need to manually fix. 
+For more information, please refer to http://go.microsoft.com/fwlink/?LinkId=46995 or search for the help topic "Converting from Visual Studio .NET 2002 or 2003".
+Conversion Started on project file SimpleChat.csproj at May 29 2010, 18:50:07.
+
+=========================ERRORS===================
+
+=========================WARNINGS=================
+Warning: This web project was converted as a file-based web application. If your site contained any IIS meta-information, e.g. sub-folders marked as virtual directories, it is recommended that you close this web site and re-open it using the Open Web Site command and selecting the Local IIS tab.
+
+=========================COMMENTS=================
+Web.Config: Added 'xhtmlConformance' attribute.
+Removed attribute AutoEventWireup from file ChatWin.aspx.
+Removed attribute Codebehind from file ChatWin.aspx.
+Access level of 'Page_Load' changed to 'protected' in file ChatWin.aspx.cs (Line 20).
+Access level of 'BT_Send_Click' changed to 'protected' in file ChatWin.aspx.cs (Line 57).
+Removed attribute AutoEventWireup from file Default.aspx.
+Removed attribute Codebehind from file Default.aspx.
+Access level of 'Page_Load' changed to 'protected' in file Default.aspx.cs (Line 20).
+Access level of 'BT_Enter_Click' changed to 'protected' in file Default.aspx.cs (Line 44).
+Removed attribute Codebehind from file Global.asax.
+Removed attribute AutoEventWireup from file TheChatScreenWin.aspx.
+Removed attribute Codebehind from file TheChatScreenWin.aspx.
+Access level of 'Page_Load' changed to 'protected' in file TheChatScreenWin.aspx.cs (Line 19).
+Added folder App_Code.
+Moved file Global.asax.cs to the App_Code\ directory.
+Moved file Chat.cs to the App_Code\ directory.
+Moved file AssemblyInfo.cs to the App_Code\ directory.
+Removed file Bin\SimpleChat.dll.
+Removed file SimpleChat.csproj.
+Removed file SimpleChat.csproj.webinfo.
+Project SimpleChat.csproj has been converted successfully at May 29 2010, 18:50:08.
